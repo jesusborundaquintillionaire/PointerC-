@@ -1,0 +1,41 @@
+/*
+ * PunteroTres.cpp
+ *
+ *  Created on: May 30, 2024
+ *      Author: Jesus Borunda
+ */
+
+#include <iostream> //library for input and output
+
+int main(){  //main function
+    // Declaring three integer variables
+    int numero1, numero2, numero3;
+
+    // Ask the user to enter three integer values
+    std::cout << "Please enter three integer values now: ";
+    std::cin >> numero1 >> numero2 >> numero3;
+
+    //Declare and assign pointers to dynamic memory
+    int* puntero1 = new int(numero1);
+    int* puntero2 = new int(numero2);
+    int* puntero3 = new int(numero3);
+
+    //Display the contents of the variables and pointers
+    std::cout << "Values and addresses of the variables and pointers:\n";
+    std::cout << "numero1: Value = " << numero1 << ", Address = " << &numero1 << "\n";
+    std::cout << "puntero1: Value = " << *puntero1 << ", Address = " << puntero1 << "\n";
+    std::cout << "numero2: Value = " << numero2 << ", Address = " << &numero2 << "\n";
+    std::cout << "puntero2: Value = " << *puntero2 << ", Address = " << puntero2 << "\n";
+    std::cout << "numero3: Value = " << numero3 << ", Address = " << &numero3 << "\n";
+    std::cout << "puntero3: Value = " << *puntero3 << ", Address = " << puntero3 << "\n";
+
+    // Delete operator to free up the memory to avoid memory leaks
+    delete puntero1;
+    delete puntero2;
+    delete puntero3;
+
+    return 0;
+}
+
+//numero = number (from Spanish to English)
+//puntero = pointer (from Spanish to English)
